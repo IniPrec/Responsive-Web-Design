@@ -4,16 +4,117 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css" />
   </head>
   <body>
-    <h1 id="title">AJAYI CROWTHER UNIVERSITY SURVEY FORM</h1>
+    <h1 id="title">W3SCHOOL SURVEY FORM</h1>
     <p id="description">
       Thank you for taking you time to improve this platform
     </p>
-    <form action="" id="survey-form">
+    <form action="" id="survey-form" method="post">
       <fieldset>
-        <label for="first-name">First Name: <input type="text" id="first-name" /></label>
+        <label for="name" id="name-label"
+          >Name:
+          <input
+          class="input1"
+            type="text"
+            name="fullname"
+            id="name"
+            placeholder="Enter your full name"
+            required
+        /></label>
+        <label for="email" id="email-label"
+          >Email:
+          <input
+          class="input1"
+            type="email"
+            name="eMail"
+            id="email"
+            placeholder="Enter your email"
+            required
+        /></label>
+        <label for="number" id="number-label"
+          >Age (optional):
+          <input
+          class="input1"
+            type="number"
+            name="age"
+            id="number"
+            min="13"
+            max="50"
+            placeholder="Age"
+        /></label>
+        <label for="dropdown"
+          >Which option describes your current role?
+          <select name="role" id="dropdown">
+            <option value="">select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Employed</option>
+            <option value="3">Unemployed</option>
+            <option value="4">Entrepreneur</option>
+            <option value="5">Other</option>
+          </select>
+        </label>
       </fieldset>
+      <fieldset>
+        <legend>Would you recommend W3Schools for a friend?</legend>
+        <label for="definitely">
+          <input
+            type="radio"
+            name="recommend"
+            id="definitely"
+            value="definitely"
+            checked
+          />Definitely
+        </label>
+        <label for="maybe">
+          <input type="radio" name="recommend" id="maybe" value="maybe" />Maybe
+        </label>
+        <label for="not-sure">
+          <input
+            type="radio"
+            name="recommend"
+            id="not-sure"
+            value="not-sure"
+          />Not Sure
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>What is your favorite feature of W3Schools?</legend>
+        <select name="feature" id="feature">
+            <option value="">Select an option</option>
+            <option value="1">Tutorials</option>
+            <option value="2">Exercises</option>
+            <option value="3">Certificates</option>
+            <option value="4">Services</option>
+            <option value="5">Jobs</option>
+            <option value="6">Spaces</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>What would you like to see improved <i>(check all that apply)</i></legend>
+       <label for="frontend"
+          ><input type="checkbox" name="frontEnd" id="frontend" value="frontend" checked /> HTML
+          and CSS</label
+        >
+        <label for="javascript"
+          ><input type="checkbox" name="javaScript" id="javascript" value="javascript"/>
+          JavaScript</label
+        >
+        <label for="backend"
+          ><input type="checkbox" name="backEnd" id="backend" value="backend"/> Backend</label
+        >
+        <label for="data-analytics"
+          ><input type="checkbox" name="dataAnalytics" id="data-analytics" value="data-analytics" />
+          Data Analytics</label
+        >
+        <label for="web-building"
+          ><input type="checkbox" name="webBuilding" id="web-building" value="web-building" /> Web
+          Building</label
+        >
+      </fieldset>
+      <textarea name="suggestion" id="suggestion" cols="30" rows="5"></textarea>
+      <label for="submit"><input type="submit" id="submit" /></label>
     </form>
   </body>
 </html>
