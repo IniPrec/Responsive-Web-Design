@@ -10,6 +10,16 @@ body {
   font-weight: 800;
 }
 
+.calories-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.calories-info h2{
+    margin: 0;
+}
+
 .divider {
   border-bottom: 1px solid #888989;
   margin: 2px 0;
@@ -45,4 +55,8 @@ p {
   margin: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.small-text {
+    font-size: 0.85rem;
 }
